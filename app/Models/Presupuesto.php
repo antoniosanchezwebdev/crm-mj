@@ -45,6 +45,6 @@ class Presupuesto extends Model
     }
     public function cliente()
     {
-        return $this->belongsTo(Clients::class, 'cliente_id', 'id');
+        return $this->belongsTo(Cliente::class, 'cliente_id', 'id');
     }
 }

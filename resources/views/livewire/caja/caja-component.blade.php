@@ -5,18 +5,18 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab1')">Consultar
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab1')">Consultar
                                 movimientos</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block" wire:click="cambioTab('tab2')">Ver
+                            <button type="button" class="btn btn-outline-warning text-black btn-block" wire:click="cambioTab('tab2')">Ver
                                 movimiento</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab3')">Hacer
                                 movimiento</button>
                         </div>
@@ -30,18 +30,18 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Consultar movimientos</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab2')">Ver
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab2')">Ver
                                 movimiento</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab3')">Hacer
                                 movimiento</button>
                         </div>
@@ -58,11 +58,11 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Consultar movimientos</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab2')">Ver
                                 movimiento</button>
                         </div>
@@ -70,7 +70,7 @@
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab3')">Hacer
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab3')">Hacer
                                 movimiento</button>
                         </div>
 
@@ -91,7 +91,7 @@
                     <div>
                         <div class="row">
                             <div class="col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-primary btn-block"
+                                <button type="button" class="btn btn-warning btn-block"
                                     wire:click="cambioTab('tab1')">Consultar movimientos</button>
                             </div>
                             <div class="ms-auto col-6 d-grid gap-2">
@@ -103,7 +103,7 @@
                         <br>
                         <div class="row">
                             <div class="me-auto col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-outline-primary btn-block"
+                                <button type="button" class="btn btn-outline-warning text-black btn-block"
                                     wire:click="cambioTab('tab3')">Añadir
                                     movimiento</button>
                             </div>
@@ -119,7 +119,7 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Consultar movimientos</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
@@ -131,7 +131,7 @@
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab3')">Hacer
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab3')">Hacer
                                 movimiento</button>
                         </div>
                     </div>
@@ -153,18 +153,18 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
                             <h3>Consultar movimientos</h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')">
                             <h5>Ver
                                 movimiento</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')">
                             <h5>Hacer
                                 movimiento</h5>
                         </button>
@@ -176,18 +176,18 @@
             @elseif ($tab == 'tab2')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
                             <h5>Consultar movimientos</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab2')">
                             <h3>Ver
                                 movimiento</h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')">
                             <h5>Hacer
                                 movimiento</h5>
                         </button>
@@ -201,18 +201,18 @@
             @elseif ($tab == 'tab3')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
                             <h5>Consultar movimientos</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')">
                             <h5>Ver
                                 movimiento</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab3')">
                             <h3>Hacer
                                 movimiento</h3>
                         </button>
@@ -230,18 +230,18 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
                             <h3>Consultar movimientos</h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')" disabled>
+                        <button class="nav-link text-black" wire:click.prevent="cambioTab('tab2')" disabled>
                             <h5>Ver
                                 movimiento</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')">
                             <h5>Hacer
                                 movimiento</h5>
                         </button>
@@ -253,18 +253,18 @@
             @elseif ($tab == 'tab3')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
                             <h5>Consultar movimientos</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')" disabled>
+                        <button class="nav-link text-black" wire:click.prevent="cambioTab('tab2')" disabled>
                             <h5>Ver
                                 movimiento</h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab3')">
                             <h3>Hacer
                                 movimiento</h3>
                         </button>

@@ -57,7 +57,7 @@
                 <br>
                 <label for="nuevoSolicitado">Añadir trabajo solicitado</label><br>
                 <input type="text" wire:model="nuevoSolicitado" id="nuevoSolicitado" name="nuevoSolicitado">
-                <button wire:click.prevent="agregarSolicitado" class="btn btn-primary">Añadir</button>
+                <button wire:click.prevent="agregarSolicitado" class="btn btn-warning">Añadir</button>
             </div>
         </div>
         <br>
@@ -72,7 +72,7 @@
                 <br>
                 <label for="nuevoRealizar">Añadir trabajo a realizar</label><br>
                 <input type="text" wire:model="nuevoRealizar" id="nuevoRealizar" name="nuevoRealizar">
-                <button wire:click.prevent="agregarRealizar" class="btn btn-primary">Añadir</button>
+                <button wire:click.prevent="agregarRealizar" class="btn btn-warning">Añadir</button>
             </div>
         </div>
         <br>
@@ -161,7 +161,7 @@
                     @endforeach
                 </select>
                 <br>
-                <button wire:click.prevent="agregarTrabajador" class="btn btn-primary mt-2">Añadir</button>
+                <button wire:click.prevent="agregarTrabajador" class="btn btn-warning mt-2">Añadir</button>
             </div>
         </div>
         <br>
@@ -176,7 +176,7 @@
                 <br>
                 <label for="nuevoRealizar">Añadir daño localizado</label><br>
                 <input type="text" wire:model="nuevoDaño">
-                <button wire:click.prevent="agregarDaño" class="btn btn-primary">Añadir</button>
+                <button wire:click.prevent="agregarDaño" class="btn btn-warning">Añadir</button>
             </div>
         </div>
         <br>
@@ -189,7 +189,7 @@
                             <!-- Mostrar vista previa de la imagen -->
                             <img src="{{ Storage::url($documento) }}" alt="Documento" style=" width: 100%">
                         @elseif (Str::endsWith($documento, ['.pdf']))
-                            {{ substr($documento, 11) }} : <a class="btn btn-primary"
+                            {{ substr($documento, 11) }} : <a class="btn btn-warning"
                                 href="{{ Storage::url($documento) }}" target="_blank">Ver Documento</a>
                         @endif
                     </div>
@@ -198,7 +198,7 @@
                 <input type="file" class="form-control" id="documentosArray" wire:model="documentosArray"
                     multiple>
                 <br>
-                <button type="button" class="btn btn-primary" wire:click.prevent="subirArchivo">Subir
+                <button type="button" class="btn btn-warning" wire:click.prevent="subirArchivo">Subir
                     documento</button>
             </div>
         </div>

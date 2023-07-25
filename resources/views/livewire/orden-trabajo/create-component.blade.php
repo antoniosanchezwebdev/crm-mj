@@ -148,10 +148,10 @@
                                     <td>{{ $productoLista->cod_producto }}</td>
                                     <td>{{ $productoLista->descripcion }}</td>
                                     <td>{{ $productoLista->precio_venta }}€</td>
-                                    <td> <button class="btn btn-sm btn-primary"
+                                    <td> <button class="btn btn-sm btn-warning"
                                             wire:click.prevent="reducir({{ $productoID }})">-</button>
                                         {{ $pCantidad }}
-                                        <button class="btn btn-sm btn-primary"
+                                        <button class="btn btn-sm btn-warning"
                                             wire:click.prevent="aumentar({{ $productoID }})">+</button>
                                     </td>
                                     <td>{{ $productoLista->precio_venta * $pCantidad }}€
@@ -188,7 +188,7 @@
     <h1>Finalizar presupuesto</h1>
 </div>
 <div class="mb-3 row d-flex align-items-center">
-    <button type="submit" class="btn btn-primary">Crear orden de trabajo</button>
+    <button type="submit" class="btn btn-warning">Crear orden de trabajo</button>
 </div>
 </form>
 
@@ -197,7 +197,7 @@
     <h1>Opciones</h1>
 </div>
 <div class="mb-3 row d-flex align-items-center ">
-    <a href="{{ route('clients.create') }}" class="btn btn-primary">Crear cliente</a>
+    <a href="{{ route('clients.create') }}" class="btn btn-warning">Crear cliente</a>
 </div>
 
 </div>

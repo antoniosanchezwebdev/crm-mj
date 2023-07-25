@@ -47,7 +47,7 @@
                         <td>
                             @if ($fact->metodo_pago == 'No pagado')
                                 <div class="col mb-2">
-                                    <button type="button" class="btn btn-primary boton-producto"
+                                    <button type="button" class="btn btn-warning boton-producto"
                                         onclick="Livewire.emit('seleccionarProducto', {{ $fact->id }});">Editar</button>
                                     <br>
                                 </div>
@@ -75,7 +75,7 @@
                                     </div>
                                 </div>
                             @else
-                                <button type="button" class="btn btn-primary boton-producto"
+                                <button type="button" class="btn btn-warning boton-producto"
                                     onclick="Livewire.emit('seleccionarProducto', {{ $fact->id }});">Editar</button>
                             @endif
                         </td>

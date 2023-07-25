@@ -166,8 +166,10 @@
                 <div class="mb-3 row d-flex align-items-left">
                     <label for="vehiculo_renting" class="col-sm-2 col-form-label">¿Este vehículo es de
                         renting?</label>
-                    <input class="col-sm-2 form-check" type="checkbox" wire:model="vehiculo_renting"
-                        name="vehiculo_renting" id="vehiculo_renting" />
+                    <div class="col-sm-2 mt-3">
+                        <input class="form-check form-check-input" type="checkbox" wire:model="vehiculo_renting"
+                            name="vehiculo_renting" id="vehiculo_renting" />
+                    </div>
                     @error('vehiculo_renting')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -211,10 +213,10 @@
                                             <td>{{ $productoLista->cod_producto }}</td>
                                             <td>{{ $productoLista->descripcion }}</td>
                                             <td>{{ $productoLista->precio_venta }}€</td>
-                                            <td> <button class="btn btn-sm btn-primary"
+                                            <td> <button class="btn btn-sm btn-warning"
                                                     wire:click.prevent="reducir({{ $productoID }})">-</button>
                                                 {{ $pCantidad }}
-                                                <button class="btn btn-sm btn-primary"
+                                                <button class="btn btn-sm btn-warning"
                                                     wire:click.prevent="aumentar({{ $productoID }})">+</button>
                                             </td>
                                             <td>{{ $productoLista->precio_venta * $pCantidad }}€
@@ -305,7 +307,7 @@
                                 @enderror
                             </div>
                         @endif
-                        <button class="btn btn-outline-primary" wire:click.prevent="añadirProducto"
+                        <button class="btn btn-outline-warning" wire:click.prevent="añadirProducto"
                             style="margin-top:10px;">Añadir a la
                             lista</button>
                     </div>
@@ -315,7 +317,7 @@
         <br>
 
         <div class="mb-3 row d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary self-center"
+            <button type="submit" class="btn btn-warning self-center"
                 style="margin-bottom: 20px !important; width: 80% !important;">Crear presupuesto</button>
         </div>
     </form>

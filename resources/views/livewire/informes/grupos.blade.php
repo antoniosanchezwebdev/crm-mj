@@ -76,7 +76,7 @@
                         @endforeach
                     </div>
                     <div class="card-footer">
-                        <button type="button" wire:click="addGrupo" class="btn btn-primary"> Añadir
+                        <button type="button" wire:click="addGrupo" class="btn btn-warning"> Añadir
                             grupo </button>
                     </div>
                 </div>

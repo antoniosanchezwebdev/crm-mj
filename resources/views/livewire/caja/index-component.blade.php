@@ -26,7 +26,7 @@
                             <td>{{ $fact->metodo_pago }}</td>
                             <td>{{ $fact->descripción }} </td>
 
-                            <td><button type="button" class="btn btn-primary boton-producto"
+                            <td><button type="button" class="btn btn-warning boton-producto"
                                 onclick="Livewire.emit('seleccionarProducto', {{ $fact->id }});">Editar</button>
                         </td>
                         </tr>

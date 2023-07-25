@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\FabricantesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetController;
@@ -56,32 +57,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => 'is.admin', 'prefix' => 'admin'], function () {
 
-    /* --------------------------------------- */
-    // Budgets
-    Route::get('budgets', [BudgetController::class, 'index'])->name('budget.index');
-    Route::get('budget-create', [BudgetController::class, 'create'])->name('budget.create');
-    Route::post('budget-store', [BudgetController::class, 'store'])->name('budget.store');
-    Route::get('budget-edit', [BudgetController::class, 'edit'])->name('budget.edit');
-    Route::post('budget-update', [BudgetController::class, 'update'])->name('budget.update');
-    Route::delete('budget-delete', [BudgetController::class, 'delete'])->name('budget.delete');
-
-    // Budgets Reference Autoincremental
-    Route::get('budgets-reference', [BudgetReferenceAutopincrementsController::class, 'index'])->name('budgetReference.index');
-    Route::get('budget-reference-create', [BudgetReferenceAutopincrementsController::class, 'create'])->name('budgetReference.create');
-    Route::post('budget-reference-store', [BudgetReferenceAutopincrementsController::class, 'store'])->name('budgetReference.store');
-    Route::get('budget-reference-edit', [BudgetReferenceAutopincrementsController::class, 'edit'])->name('budgetReference.edit');
-    Route::post('budget-reference-update', [BudgetReferenceAutopincrementsController::class, 'update'])->name('budgetReference.update');
-    Route::delete('budget-reference-delete', [BudgetReferenceAutopincrementsController::class, 'delete'])->name('budgetReference.delete');
-
-    // Budgets Status
-    Route::get('budgets-status', [BudgetStatuController::class, 'index'])->name('budgetStatus.index');
-    Route::get('budget-status-create', [BudgetStatuController::class, 'create'])->name('budgetStatus.create');
-    Route::post('budget-status-store', [BudgetStatuController::class, 'store'])->name('budgetStatus.store');
-    Route::get('budget-status-edit', [BudgetStatuController::class, 'edit'])->name('budgetStatus.edit');
-    Route::post('budget-status-update', [BudgetStatuController::class, 'update'])->name('budgetStatus.update');
-    Route::delete('budget-status-delete', [BudgetStatuController::class, 'delete'])->name('budgetStatus.delete');
-
-    /* --------------------------------------- */
 
     // RECORDATORIO: IMPORTAR CONTROLADORES NUEVOS
 
@@ -223,7 +198,6 @@ Route::group(['middleware' => 'is.admin', 'prefix' => 'admin'], function () {
 
     Route::get('informes', [InformesController::class, 'index'])->name('informes.index');
     Route::get('fabricantes', [FabricantesController::class, 'index'])->name('fabricantes.index');
-
-
+    Route::get('agenda', [AgendaController::class, 'index'])->name('agenda.index');
 
 });

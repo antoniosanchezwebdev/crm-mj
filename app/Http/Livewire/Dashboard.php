@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Evento;
 use App\Models\OrdenLog;
 use App\Models\OrdenTrabajo;
 use App\Models\Productos;
@@ -23,12 +24,8 @@ class Dashboard extends Component
 
     public function mount()
     {
-        $this->tareas_en_curso = Auth::user()->tareasEnCurso;
-        $this->tareas_no_completadas = Auth::user()->tareas->where('estado' ,'Asignada');
-        $this->tareas_completadas = Auth::user()->tareas->where('estado', 'Completada');
-        $this->tareas_facturadas = Auth::user()->tareas->where('estado', 'Facturada');
-
-
+        $this->tareas_en_curso = Evento::all();
+        $this->tareas_no_completadas = Auth::user()->tareas->where('estado', 'Asignada');
         $this->productos = Productos::all();
     }
 
@@ -69,7 +66,7 @@ class Dashboard extends Component
         $totalMinutes = $this->tiempoTotalTrabajado($tareaId, $trabajadorId);
 
         $tarea = OrdenTrabajo::find($tareaId);
-        if ($tarea->operarios_tiempo != null && !empty($tarea->operarios_tiempo)) {
+        if ($tarea->operarios_tiempo != null && !empty($tarea->operarios_tiempo) && $tarea->operarios_tiempo != '"\"[]\""') {
             $operarios_tiempo = json_decode($tarea->operarios_tiempo, true); // Convierte el string JSON a un array
 
             // Actualiza el tiempo trabajado por el operario
@@ -109,6 +106,68 @@ class Dashboard extends Component
         return $totalMinutes;
     }
 
+    public function calcularTiempo($tiempo)
+    {
+        $stringFinal = "";
+        $tiempoHoras = 0;
+        $tiempoMinutos = 0;
+
+        if ($tiempo > 60) {
+            $tiempoMinutos = floor($tiempo / 60);
+            $tiempo = floor($tiempo % 60);
+            if ($tiempoMinutos > 60) {
+                $tiempoHoras = floor($tiempoMinutos / 60);
+                $tiempoMinutos = floor($tiempoMinutos % 60);
+            }
+        }
+
+        if (!$tiempoHoras) {
+            if (!$tiempoMinutos) {
+                if ($tiempo < 10) {
+                    $stringSegundos = "0" . $tiempo;
+                } else {
+                    $stringSegundos =  $tiempo;
+                }
+                $stringFinal = "00:00:" . $stringSegundos;
+            } else {
+                if ($tiempo < 10) {
+                    $stringSegundos = "0" . $tiempo;
+                } else {
+                    $stringSegundos =  $tiempo;
+                }
+
+                if ($tiempoMinutos < 10) {
+                    $stringMinutos = "0" . $tiempoMinutos;
+                } else {
+                    $stringMinutos =  $tiempoMinutos;
+                }
+
+                $stringFinal = "00:" . $stringMinutos . ":" . $stringSegundos;
+            }
+        } else {
+            if ($tiempo < 10) {
+                $stringSegundos = "0" . $tiempo;
+            } else {
+                $stringSegundos =  $tiempo;
+            }
+
+            if ($tiempoMinutos < 10) {
+                $stringMinutos = "0" . $tiempoMinutos;
+            } else {
+                $stringMinutos =  $tiempoMinutos;
+            }
+            if ($tiempoHoras < 10) {
+                $stringHoras = "0" . $tiempoHoras;
+            } else {
+                $stringHoras =  $tiempoHoras;
+            }
+
+            $stringFinal = $stringHoras . ":" . $stringMinutos . ":" . $stringSegundos;
+        }
+        return $stringFinal;
+    }
+
+
     public function completarTarea($tareaId)
     {
         $tarea = OrdenTrabajo::find($tareaId);
@@ -123,7 +182,8 @@ class Dashboard extends Component
         return redirect()->route('caja.index');
     }
 
-    public function cambioTab($tab){
+    public function cambioTab($tab)
+    {
         $this->tab = $tab;
     }
 }

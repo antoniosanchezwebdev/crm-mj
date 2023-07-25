@@ -170,7 +170,7 @@
                                     @endif
 
                                 </td>
-                                <td><button type="button" class="btn btn-primary boton-producto"
+                                <td><button type="button" class="btn btn-warning boton-producto"
                                         onclick="Livewire.emit('seleccionarProducto', {{ $producto->id }});">Editar</button>
                                 </td>
                             </tr>

@@ -78,7 +78,7 @@
                                     <td>{{ $presup->estado }} </td>
 
 
-                                    <td> <button type="button" class="btn btn-primary boton-producto"
+                                    <td> <button type="button" class="btn btn-warning boton-producto"
                                             onclick="Livewire.emit('seleccionarProducto', {{ $presup->id }});">Ver/Editar</button>
                                             @if($presup->estado == "Pendiente")
                                             <button type="button" class="btn btn-success btn-sm"

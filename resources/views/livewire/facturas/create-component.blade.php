@@ -337,7 +337,7 @@
                                         <img src="{{ Storage::url($documento) }}" alt="Documento"
                                             style=" width: 100%">
                                     @elseif (Str::endsWith($documento, ['.pdf']))
-                                        {{ substr($documento, 11) }} : <a class="btn btn-primary"
+                                        {{ substr($documento, 11) }} : <a class="btn btn-warning"
                                             href="{{ Storage::url($documento) }}" target="_blank">Ver Documento</a>
                                     @endif
                                 </div>
@@ -347,7 +347,7 @@
                     <br>
                 @else
                     <div class="mb-3 row d-flex align-items-center">
-                        <button type="button" class="btn btn-primary" wire:click.prevent="addDocumentos">Añadir
+                        <button type="button" class="btn btn-warning" wire:click.prevent="addDocumentos">Añadir
                             imágenes
                             desde
                             orden de trabajo</button>
@@ -366,7 +366,7 @@
                                         <img src="{{ Storage::url($documento) }}" alt="Documento"
                                             style=" width: 100%">
                                     @elseif (Str::endsWith($documento, ['.pdf']))
-                                        {{ substr($documento, 11) }} : <a class="btn btn-primary"
+                                        {{ substr($documento, 11) }} : <a class="btn btn-warning"
                                             href="{{ Storage::url($documento) }}" target="_blank">Ver Documento</a>
                                     @endif
                                 </div>
@@ -376,7 +376,7 @@
                     <br>
                 @else
                     <div class="mb-3 row d-flex align-items-center">
-                        <button type="button" class="btn btn-primary" wire:click.prevent="addDocumentos">Añadir
+                        <button type="button" class="btn btn-warning" wire:click.prevent="addDocumentos">Añadir
                             imágenes
                             desde
                             orden de trabajo</button>
@@ -384,7 +384,7 @@
                     <br>
                 @endif
                 <div class="mb-3 row d-flex align-items-center">
-                    <button type="button" class="btn btn-primary" wire:click.prevent="addObservaciones">Añadir
+                    <button type="button" class="btn btn-warning" wire:click.prevent="addObservaciones">Añadir
                         comentarios
                         desde orden de trabajo</button>
                 </div>
@@ -419,7 +419,7 @@
                                         <img src="{{ Storage::url($documento) }}" alt="Documento"
                                             style=" width: 100%">
                                     @elseif (Str::endsWith($documento, ['.pdf']))
-                                        {{ substr($documento, 11) }} : <a class="btn btn-primary"
+                                        {{ substr($documento, 11) }} : <a class="btn btn-warning"
                                             href="{{ Storage::url($documento) }}" target="_blank">Ver Documento</a>
                                     @endif
                                 </div>
@@ -429,7 +429,7 @@
                     <br>
                 @else
                     <div class="mb-3 row d-flex align-items-center">
-                        <button type="button" class="btn btn-primary" wire:click.prevent="addDocumentos">Añadir
+                        <button type="button" class="btn btn-warning" wire:click.prevent="addDocumentos">Añadir
                             imágenes
                             desde
                             orden de trabajo</button>
@@ -448,7 +448,7 @@
                                         <img src="{{ Storage::url($documento) }}" alt="Documento"
                                             style=" width: 100%">
                                     @elseif (Str::endsWith($documento, ['.pdf']))
-                                        {{ substr($documento, 11) }} : <a class="btn btn-primary"
+                                        {{ substr($documento, 11) }} : <a class="btn btn-warning"
                                             href="{{ Storage::url($documento) }}" target="_blank">Ver Documento</a>
                                     @endif
                                 </div>
@@ -458,7 +458,7 @@
                     <br>
                 @else
                     <div class="mb-3 row d-flex align-items-center">
-                        <button type="button" class="btn btn-primary" wire:click.prevent="addDocumentos">Añadir
+                        <button type="button" class="btn btn-warning" wire:click.prevent="addDocumentos">Añadir
                             imágenes
                             desde
                             orden de trabajo</button>
@@ -466,7 +466,7 @@
                     <br>
                 @endif
                 <div class="mb-3 row d-flex align-items-center">
-                    <button type="button" class="btn btn-primary" wire:click.prevent="addObservaciones">Añadir
+                    <button type="button" class="btn btn-warning" wire:click.prevent="addObservaciones">Añadir
                         comentarios
                         desde orden de trabajo</button>
                 </div>
@@ -476,7 +476,7 @@
     @endif
 
     <div class="row d-flex align-items-center">
-        <button class="btn btn-primary" wire:click="submit('No pagado')">Guardar factura sin cobrar
+        <button class="btn btn-warning" wire:click="submit('No pagado')">Guardar factura sin cobrar
         </button>
     </div>
     <div class="p-1"></div>

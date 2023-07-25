@@ -33,7 +33,7 @@
                                 @else
                                     <td> > {{ $producto->peso_min }} y ≤ {{ $producto->peso_max }}</td>
                                 @endif
-                                <td> <button type="button" class="btn btn-primary boton-producto"
+                                <td> <button type="button" class="btn btn-warning boton-producto"
                                         onclick="Livewire.emit('seleccionarProducto', {{ $producto->id }});">Ver/Editar</button>
                                 </td>
                             </tr>

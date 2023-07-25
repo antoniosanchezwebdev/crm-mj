@@ -5,23 +5,23 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab1')">Tareas sin
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab1')">Tareas sin
                                 asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tareas asignadas</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab3')">Asignar/Editar
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -34,23 +34,23 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab2')">Tareas
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab2')">Tareas
                                 asignadas</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab3')">Asignar/Editar
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -66,23 +66,23 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tareas asignadas</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block"
+                            <button type="button" class="btn btn-warning btn-block"
                                 wire:click="cambioTab('tab3')">Asignar/Editar
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -95,23 +95,23 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tareas asignadas</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab3')">Asignar/Editar
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block"
+                            <button type="button" class="btn btn-warning btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -120,9 +120,9 @@
                 <br>
 
                 <div class="ms-auto col d-grid gap-2">
-                    <a class="btn btn-primary btn-block" href="{{ route('proveedores.index') }}"> Consultar y editar
+                    <a class="btn btn-warning btn-block" href="{{ route('proveedores.index') }}"> Consultar y editar
                         proveedores </a>
-                    <a class="btn btn-primary btn-block" href="{{ route('ecotasa.index') }}"> Consultar y editar
+                    <a class="btn btn-warning btn-block" href="{{ route('ecotasa.index') }}"> Consultar y editar
                         ecotasas </a>
                 </div>
             @endif
@@ -132,11 +132,11 @@
                     <div>
                         <div class="row">
                             <div class="col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-primary btn-block"
+                                <button type="button" class="btn btn-warning btn-block"
                                     wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                             </div>
                             <div class="ms-auto col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-outline-primary btn-block"
+                                <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                     wire:click="cambioTab('tab2')">Tareas asignadas</button>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                     tarea</button>
                             </div>
                             <div class="ms-auto col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-outline-primary btn-block"
+                                <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                     wire:click="cambioTab('tab4')">Opciones</button>
                             </div>
                         </div>
@@ -162,11 +162,11 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block"
+                            <button type="button" class="btn btn-warning btn-block"
                                 wire:click="cambioTab('tab2')">Tareas asignadas</button>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -193,11 +193,11 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Tareas sin asignar</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tareas asignadas</button>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                                 tarea</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block"
+                            <button type="button" class="btn btn-warning btn-block"
                                 wire:click="cambioTab('tab4')">Opciones</button>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                 <br>
 
                 <div class="ms-auto col d-grid gap-2">
-                    <a class="btn btn-primary btn-block" href="{{ route('trabajadores.index') }}"> Consultar y
+                    <a class="btn btn-warning btn-block" href="{{ route('trabajadores.index') }}"> Consultar y
                         editar proveedores </a>
                 </div>
             @endif
@@ -229,18 +229,18 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')"><h3>Tareas sin asignar</h3></button>
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')"><h3>Tareas sin asignar</h3></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
                             tarea</h5></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones</h5></button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones</h5></button>
                     </li>
                 </ul>
 
@@ -248,18 +248,18 @@
             @elseif ($tab == 'tab2')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</h5></button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</h5></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab2')"> <h3>Tareas asignadas</h3>
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab2')"> <h3>Tareas asignadas</h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
                             tarea</h5></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones</h5></button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones</h5></button>
                     </li>
                 </ul>
                 <br>
@@ -271,18 +271,18 @@
             @elseif ($tab == 'tab3')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</h5></button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</h5></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab3')"><h3>Asignar/Editar
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab3')"><h3>Asignar/Editar
                             tarea</h3></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones </h5></button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab4')"> <h5> Opciones </h5></button>
                     </li>
                 </ul>
                 <br>
@@ -291,26 +291,26 @@
             @elseif ($tab == 'tab4')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')"> <h5> Tareas sin asignar</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas </h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab3')"> <h5> Asignar/Editar
                             tarea</h5></button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab4')"><h3>Opciones</h3></button>
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab4')"><h3>Opciones</h3></button>
                     </li>
                 </ul>
                 <br>
 
                 <div class="ms-auto col d-grid gap-2">
-                    <a class="btn btn-primary btn-lg" href="{{ route('proveedores.index') }}"> Consultar y editar
+                    <a class="btn btn-warning btn-lg" href="{{ route('proveedores.index') }}"> Consultar y editar
                         proveedores </a>
-                    <a class="btn btn-primary btn-lg" href="{{ route('ecotasa.index') }}"> Consultar y editar
+                    <a class="btn btn-warning btn-lg" href="{{ route('ecotasa.index') }}"> Consultar y editar
                         ecotasas </a>
                 </div>
             @endif
@@ -318,23 +318,23 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
                             <h3> Tareas sin asignar </h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')">
                             <h5>Tareas asignadas </h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')" disabled>
+                        <button class="nav-link text-black" wire:click.prevent="cambioTab('tab3')" disabled>
                             <h5> Asignar/Editar
                                 tarea </h5>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab4')">
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab4')">
                             <h5> Opciones </h5>
                         </button>
                     </li>
@@ -344,18 +344,18 @@
             @elseif ($tab == 'tab2')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')"><h5> Tareas sin asignar  </button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')"><h5> Tareas sin asignar  </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab2')"> <h3> Tareas asignadas </h3>
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab2')"> <h3> Tareas asignadas </h3>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')" disabled><h5> Asignar/Editar
+                        <button class="nav-link text-black" wire:click.prevent="cambioTab('tab3')" disabled><h5> Asignar/Editar
                             tarea </h5> </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab4')"><h5> Opciones </h5> </button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab4')"><h5> Opciones </h5> </button>
                     </li>
                 </ul>
                 <br>
@@ -366,24 +366,24 @@
             @elseif ($tab == 'tab4')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab1')"><h5> Tareas sin asignar </h5> </button>
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')"><h5> Tareas sin asignar </h5> </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas
+                        <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab2')"> <h5> Tareas asignadas
                         </h5> </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" wire:click.prevent="cambioTab('tab3')" disabled> <h5> Asignar/Editar
+                        <button class="nav-link text-black" wire:click.prevent="cambioTab('tab3')" disabled> <h5> Asignar/Editar
                             tarea </h5> </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab4')"><h3> Opciones </h3> </button>
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab4')"><h3> Opciones </h3> </button>
                     </li>
                 </ul>
                 <br>
 
                 <div class="ms-auto col d-grid gap-2">
-                    <a class="btn btn-primary btn-lg" href="{{ route('trabajadores.index') }}"> Consultar y
+                    <a class="btn btn-warning btn-lg" href="{{ route('trabajadores.index') }}"> Consultar y
                         editar trabajadores </a>
                 </div>
             @endif

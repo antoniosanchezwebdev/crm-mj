@@ -25,7 +25,7 @@
     </div>
     <br>
     <div class="row d-flex align-items-center">
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-warning">
             {{ __('Editar fabricante') }}
         </button>
     </div>

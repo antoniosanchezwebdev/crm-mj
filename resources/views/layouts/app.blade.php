@@ -9,6 +9,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title> @yield('title') </title>
+    <style>
+        .active .page-link {
+            border-color: #000 !important;
+            color: #000 !important;
+            background-color: #fac900 !important;
+        }
+
+        .page-link {
+            color: #000 !important;
+        }
+
+        .form-check-input {
+            height: 1vh !important;
+            width: 1vh !important;
+        }
+        .form-check-input:checked {
+            background-color: #fac900 !important;
+            height: 1vh !important;
+            width: 1vh !important;
+        }
+    </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.css"
         integrity="sha512-CaTMQoJ49k4vw9XO0VpTBpmMz8XpCWP5JhGmBvuBqCOaOHWENWO1CrVl09u4yp8yBVSID6smD4+gpzDJVQOPwQ=="
@@ -46,11 +67,11 @@
     @endphp
     <div id="app">
         @include('layouts.header')
-        <div class="page-wrapper chiller-theme toggled" style="background-color: #d9d9d9;">
+        <div class="page-wrapper chiller-theme toggled" style="background-color: #fefed3;">
             {{-- @yield('content-factura')
                 @hasSection('content-producto') --}}
-            <div class="container-fluid " style="background-color: #d9d9d9; margin-top:30px; min-height:100%;">
-                <div class="container-fluid shadow-lg rounded-4" style="background-color: #fcfcfc; min-height:100%">
+            <div class="container-fluid " style="background-color: #fefed3; margin-top:30px; min-height:100%;">
+                <div class="container-fluid shadow-lg rounded-4" style="background-color: #fcfcfc; min-height:100%; border: 2px solid #ccc !important;">
                     <div style="border-bottom: 1px solid black; margin-bottom:10px;">
                         <br>
                         <div class="row">

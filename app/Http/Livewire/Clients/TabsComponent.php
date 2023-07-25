@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Clients;
 
+use Illuminate\Support\Str;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class TabsComponent extends Component
 {
@@ -10,8 +12,15 @@ class TabsComponent extends Component
 
     public $tab = "tab1";
     public $cliente;
+
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+
+    public function mount(){
+    }
     public function render()
     {
+
         return view('livewire.clients.tabs-component');
     }
 

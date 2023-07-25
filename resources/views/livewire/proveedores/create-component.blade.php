@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="mb-3 row d-flex align-items-center">
-        <button type="submit" class="btn btn-primary">Añadir proveedor</button>
+        <button type="submit" class="btn btn-warning">Añadir proveedor</button>
     </div>
     </form>
 </div>

@@ -53,18 +53,18 @@
                 <div class="mb-3 row d-flex align-items-center">
                     <label for="diametro_mayor_1400" class="col-sm-2 col-form-label">¿Es el diámetro mayor a 1400
                         mm?</label>
-                    <div class="col-sm-10">
-                        <input type="checkbox" wire:model="diametro_mayor_1400" name="diametro_mayor_1400"
-                            id="diametro_mayor_1400">
-                        @error('peso_max')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <div class="col-sm-2 mt-3">
+                        <input class="form-check form-check-input" type="checkbox" wire:model="diametro_mayor_1400"
+                            name="diametro_mayor_1400" id="diametro_mayor_1400">
                     </div>
+                    @error('peso_max')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>
         <div class="mb-3 row d-flex align-items-center">
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-warning">Guardar</button>
         </div>
     </form>
 </div>

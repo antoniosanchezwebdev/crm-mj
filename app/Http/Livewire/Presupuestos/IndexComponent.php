@@ -6,7 +6,7 @@ use App\Models\Almacen;
 use App\Models\OrdenTrabajo;
 use App\Models\Productos;
 use App\Models\Trabajador;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\Reserva;
 use App\Models\Presupuesto;
 use Illuminate\Database\Eloquent\Collection;
@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class IndexComponent extends Component
 {
     use LivewireAlert;
+    use WithPagination;
     public $presupuestos;
     public $clientes;
     public $trabajadores;
@@ -40,7 +42,7 @@ class IndexComponent extends Component
     {
         $modelo = new Presupuesto;
         $this->presupuestos = Presupuesto::all();
-        $this->clientes = Clients::all();
+        $this->clientes = Cliente::all();
         $this->trabajadores = Trabajador::all();
         $this->categorias = [
             'numero_presupuesto' => "Número de presupuesto",

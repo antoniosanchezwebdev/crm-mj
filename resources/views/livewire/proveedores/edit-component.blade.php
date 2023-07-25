@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="mb-3 row d-flex align-items-center">
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-warning">Guardar</button>
     </div>
     </form>
     <div class="mb-3 row d-flex align-items-center">

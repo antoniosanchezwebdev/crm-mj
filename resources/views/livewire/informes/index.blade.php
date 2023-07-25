@@ -791,7 +791,7 @@
     <div class="row justify-content-center">
         <div class="col-11">
             <div class="mb-3 row align-items-center">
-                <button type="button" wire:click="generarInforme" class="btn btn-primary btn-xl">Generar
+                <button type="button" wire:click="generarInforme" class="btn btn-warning btn-xl">Generar
                     informe</button>
             </div>
         </div>

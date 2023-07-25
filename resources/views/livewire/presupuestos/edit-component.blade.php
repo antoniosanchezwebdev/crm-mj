@@ -1,4 +1,3 @@
-
 <div class="container mx-auto">
     <script>
         console.log('hola');
@@ -167,8 +166,7 @@
                 <div class="mb-3 row d-flex align-items-center">
                     <label for="marca" class="col-sm-2 col-form-label">Marca</label>
                     <div class="col-sm-10">
-                        <input type="text" wire:model="marca" class="form-control" name="marca"
-                            id="marca">
+                        <input type="text" wire:model="marca" class="form-control" name="marca" id="marca">
                         @error('marca')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -187,9 +185,12 @@
                 </div>
 
                 <div class="mb-3 row d-flex align-items-left">
-                    <label for="vehiculo_renting" class="col-sm-2 col-form-label">¿Este vehículo es de renting?</label>
-                    <input class="col-sm-2 form-check" type="checkbox" wire:model="vehiculo_renting"
-                        name="vehiculo_renting" id="vehiculo_renting" />
+                    <label for="vehiculo_renting" class="col-sm-2 col-form-label">¿Este vehículo es de
+                        renting?</label>
+                    <div class="col-sm-2 mt-3">
+                        <input class="form-check form-check-input" type="checkbox" wire:model="vehiculo_renting"
+                            name="vehiculo_renting" id="vehiculo_renting" />
+                    </div>
                     @error('vehiculo_renting')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -233,10 +234,10 @@
                                             <td>{{ $productoLista->cod_producto }}</td>
                                             <td>{{ $productoLista->descripcion }}</td>
                                             <td>{{ $productoLista->precio_venta }}€</td>
-                                            <td> <button class="btn btn-sm btn-primary"
+                                            <td> <button class="btn btn-sm btn-warning"
                                                     wire:click.prevent="reducir({{ $productoID }})">-</button>
                                                 {{ $pCantidad }}
-                                                <button class="btn btn-sm btn-primary"
+                                                <button class="btn btn-sm btn-warning"
                                                     wire:click.prevent="aumentar({{ $productoID }})">+</button>
                                             </td>
                                             <td>{{ $productoLista->precio_venta * $pCantidad }}€
@@ -293,16 +294,18 @@
                 <div class="mb-3 row d-flex align-items-center">
                     <div class="col-sm-10" wire:ignore>
                         <select class="form-control" id="select2-producto-edit">
-                            @foreach ($productos as $producti)
-                                @if (
-                                    $producti->mueve_existencias == 0 ||
-                                        ($producti->mueve_existencias == 1 &&
-                                            $producti->almacenes()->first()->nombre == $servicio))
-                                    <option value="{{ $producti->id }}">{{ $producti->cod_producto }} -
-                                        {{ $producti->descripcion }}
-                                    </option>
-                                @endif
-                            @endforeach
+                            @if ($productos != null)
+                                @foreach ($productos as $producti)
+                                    @if (
+                                        $producti->mueve_existencias == 0 ||
+                                            ($producti->mueve_existencias == 1 &&
+                                                $producti->almacenes()->where('nombre', $servicio)->exists() == true))
+                                        <option value="{{ $producti->id }}">{{ $producti->cod_producto }} -
+                                            {{ $producti->descripcion }}
+                                        </option>
+                                    @endif
+                                @endforeach
+                            @endif
                         </select>
                     </div>
                 </div>
@@ -320,7 +323,8 @@
                                 @enderror
                             </div>
                         @endif
-                        <button class="btn btn-outline-primary" wire:click.prevent="añadirProducto" style="margin-top:10px;">Añadir a la
+                        <button class="btn btn-outline-warning" wire:click.prevent="añadirProducto"
+                            style="margin-top:10px;">Añadir a la
                             lista</button>
                     </div>
                 @endif
@@ -328,7 +332,7 @@
         </div>
 
         <div class="mb-3 row d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary self-center"
+            <button type="submit" class="btn btn-warning self-center"
                 style="margin-bottom: 20px !important; width: 80% !important;">Actualizar presupuesto</button>
         </div>
     </form>

@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\OrdenTrabajo;
 
 use App\Models\Presupuesto;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\Trabajador;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -16,7 +16,7 @@ class CreateComponent extends Component
 {
 
     use LivewireAlert;
-    
+
     public $identificador;
 
     public $trabajo;
@@ -65,7 +65,7 @@ class CreateComponent extends Component
         $this->precio = $this->trabajo->precio;
 
 
-        $this->clientes = Clients::all(); // datos que se envian al select2
+        $this->clientes = Cliente::all(); // datos que se envian al select2
         $this->trabajadores = Trabajador::all(); // datos que se envian al select2
         $this->productos = Productos::all();
         $this->almacenes = ListaAlmacen::all();

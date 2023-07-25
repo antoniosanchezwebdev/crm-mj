@@ -40,6 +40,7 @@
                                 <th scope="col">Modelo vehículo</th>
                                 <th scope="col">Matrícula</th>
                                 <th scope="col">Precio</th>
+                                <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -49,12 +50,12 @@
                                 <tr>
                                     <td>{{ $tarea->presupuesto->numero_presupuesto }}</th>
 
-                                    <td> @foreach(json_decode($tarea->operarios, true) as $operario)
-                                        {{User::where('id', $operario)->name}} ,
-                                        @endforeach
+                                    <td><ul> @foreach(json_decode($tarea->operarios, true) as $operario)
+                                        <li>{{$usuarios->where('id', $operario)->first()->name}}</li>
+                                        @endforeach </ul>
                                     </td>
 
-                                    <td>{{ $tarea->presupuesto->cliente }} </td>
+                                    <td>{{ $tarea->presupuesto->cliente->nombre }} </td>
 
                                     <td>{{ $tarea->fecha }}</th>
 
@@ -66,7 +67,10 @@
 
                                     <td>{{ $tarea->presupuesto->precio }} </td>
 
-                                    <td> <button type="button" class="btn btn-primary boton-producto"
+                                    <td>{{ $tarea->estado }} </td>
+
+
+                                    <td> <button type="button" class="btn btn-warning boton-producto"
                                             onclick="Livewire.emit('seleccionarProducto', {{ $tarea->id }});">Ver/Editar</button>
                                     </td>
                                 </tr>

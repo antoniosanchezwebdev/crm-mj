@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Presupuestos;
 
 use App\Models\Presupuesto;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\Reserva;
 use App\Models\Trabajador;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -13,8 +13,7 @@ use App\Models\Productos;
 use App\Models\ListaAlmacen;
 use App\Models\OrdenTrabajo;
 use App\Models\Almacen;
-use Auth;
-
+use Illuminate\Support\Facades\Auth;
 class CreateComponent extends Component
 {
 
@@ -27,10 +26,10 @@ class CreateComponent extends Component
     public $estado;
     public $matricula;
     public $kilometros;
-    public $trabajador_id = Auth::id(); // 0 por defecto por si no se selecciona ninguna
+    public $trabajador_id = 0; // 0 por defecto por si no se selecciona ninguna
     public $precio = 0;
     public $observaciones = "";
-    public $origen;
+    public $origen = "Mostrador";
     public $marca;
     public $modelo;
 
@@ -49,7 +48,8 @@ class CreateComponent extends Component
 
     public function mount()
     {
-        $this->clientes = Clients::all(); // datos que se envian al select2
+        $this->trabajador_id = Auth::user()->id;
+        $this->clientes = Cliente::all(); // datos que se envian al select2
         $this->trabajadores = Trabajador::all(); // datos que se envian al select2
         $this->almacenes = ListaAlmacen::all();
         $this->existencias_productos = Almacen::all();

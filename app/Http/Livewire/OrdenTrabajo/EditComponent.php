@@ -5,7 +5,7 @@ namespace App\Http\Livewire\OrdenTrabajo;
 use App\Models\Presupuesto;
 use App\Models\User;
 use Carbon\Carbon;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\OrdenTrabajo;
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -83,7 +83,7 @@ class EditComponent extends Component
         $this->tarea = OrdenTrabajo::find($this->identificador);
         $this->users = User::all();
         $this->productos = Productos::all(); // datos que se envian al select2
-        $this->clientes = Clients::all();
+        $this->clientes = Cliente::all();
         $this->numero_presupuesto = $this->tarea->presupuesto->numero_presupuesto;
         $this->fecha_emision = $this->tarea->presupuesto->fecha_emision;
         $this->cliente_id = $this->tarea->presupuesto->cliente_id;

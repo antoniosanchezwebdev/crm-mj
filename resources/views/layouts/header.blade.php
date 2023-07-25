@@ -30,11 +30,11 @@
     }
 
     body {
-        background-color: #d9d9d9;
+        background-color: #f6f7b6;
     }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+<nav class="navbar navbar-expand-lg shadow" style="background-color: #ffff91;">
     @mobile
         <div class="container-fluid">
             <div class="navbar-brand">
@@ -48,13 +48,42 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav justify-content-around w-100 py-2">
                     <li class="nav-item mx-2">
+                        @if (Request::is('admin/agenda'))
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/agenda">
+                                <i class="fas fa-book"></i>
+                                <strong>Agenda</strong>
+                            </a>
+                        @else
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/agenda">
+                                <i class="fas fa-book"></i>
+                                <strong>Agenda</strong>
+                            </a>
+                        @endif
+                    </li>
+                    <li class="nav-item mx-2">
+                        @if (Request::is('admin/clients'))
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/clients">
+                                <i class="fas fa-book"></i>
+                                <strong>Agenda</strong>
+                            </a>
+                        @else
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/clients">
+                                <i class="fas fa-book"></i>
+                                <strong>Clientes</strong>
+                            </a>
+                        @endif
+                    </li>
+                    <li class="nav-item mx-2">
                         @if (Request::is('admin/presupuestos'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/presupuestos">
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/presupuestos">
                                 <i class="fas fa-book"></i>
                                 <strong>Presupuestos</strong>
                             </a>
                         @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/presupuestos">
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/presupuestos">
                                 <i class="fas fa-book"></i>
                                 <strong>Presupuestos</strong>
                             </a>
@@ -62,12 +91,13 @@
                     </li>
                     <li class="nav-item mx-2">
                         @if (Request::is('admin/productos'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/productos">
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/productos">
                                 <i class="fas fa-boxes-stacked"></i>
                                 <strong>Inventario</strong>
                             </a>
                         @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/productos">
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/productos">
                                 <i class="fas fa-boxes-stacked"></i>
                                 <strong>Inventario</strong>
                             </a>
@@ -75,12 +105,13 @@
                     </li>
                     <li class="nav-item mx-2">
                         @if (Request::is('admin/orden-trabajo'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/orden-trabajo">
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/orden-trabajo">
                                 <i class="fas fa-wrench"></i>
                                 <strong>Tareas</strong>
                             </a>
                         @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/orden-trabajo">
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/orden-trabajo">
                                 <i class="fas fa-wrench"></i>
                                 <strong>Tareas</strong>
                             </a>
@@ -88,38 +119,27 @@
                     </li>
                     <li class="nav-item mx-2">
                         @if (Request::is('admin/facturas'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/facturas">
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/facturas">
                                 <i class="fas fa-wallet"></i>
                                 <strong>Facturación</strong>
                             </a>
                         @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/facturas">
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/facturas">
                                 <i class="fas fa-wallet"></i>
                                 <strong>Facturación</strong>
-                            </a>
-                        @endif
-                    </li>
-                    <li class="nav-item mx-2">
-                        @if (Request::is('admin/informes'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/informes">
-                                <i class="fas fa-file-invoice"></i>
-                                <strong>Informes</strong>
-                            </a>
-                        @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/informes">
-                                <i class="fas fa-file-invoice"></i>
-                                <strong>Informes</strong>
                             </a>
                         @endif
                     </li>
                     <li class="nav-item mx-2">
                         @if (Request::is('admin/caja'))
-                            <a class="btn btn-md btn-light text-dark d-block w-100 p-2" href="/admin/caja">
+                            <a class="btn btn-md btn-warning text-dark d-block w-100 p-2" href="/admin/caja">
                                 <i class="fas fa-cart-shopping"></i>
                                 <strong>Caja</strong>
                             </a>
                         @else
-                            <a class="btn btn-md btn-outline-light d-block w-100 p-2" href="/admin/caja">
+                            <a class="btn btn-md btn-outline-warning text-dark text-dark d-block w-100 p-2"
+                                href="/admin/caja">
                                 <i class="fas fa-cart-shopping"></i>
                                 <strong>Caja</strong>
                             </a>
@@ -136,14 +156,41 @@
             </div>
             <ul class="navbar-nav me-auto mb-0 mb-lg-0 col order-2">
                 <li class="nav-item">
-                    @if (Request::is('admin/presupuestos'))
-                        <a class="btn btn-light text-dark" href="/admin/presupuestos">
+                    @if (Request::is('admin/agenda'))
+                        <a class="btn btn-warning text-dark" href="/admin/agenda">
                             <i class="fas fa-book"></i>
+                            <strong>Agenda</strong>
+                        </a>
+                    @else
+                        <a class="btn btn-outline-warning text-dark" href="/admin/agenda">
+                            <i class="fas fa-book"></i>
+                            <strong>Agenda</strong>
+                        </a>
+                    @endif
+                </li>
+                <li class="nav-item">
+                    @if (Request::is('admin/clients'))
+                        <a class="btn btn-warning text-dark" href="/admin/clients">
+                            <i class="fas fa-user"></i>
+                            <strong>Clientes</strong>
+                        </a>
+                    @else
+                        <a class="btn btn-outline-warning text-dark" href="/admin/clients">
+                            <i class="fas fa-user"></i>
+                            <strong>Clientes</strong>
+                        </a>
+                    @endif
+
+                </li>
+                <li class="nav-item">
+                    @if (Request::is('admin/presupuestos'))
+                        <a class="btn btn-warning text-dark" href="/admin/presupuestos">
+                            <i class="fas fa-file-contract"></i>
                             <strong>Presupuestos</strong>
                         </a>
                     @else
-                        <a class="btn btn-outline-light" href="/admin/presupuestos">
-                            <i class="fas fa-book"></i>
+                        <a class="btn btn-outline-warning text-dark" href="/admin/presupuestos">
+                            <i class="fas fa-file-contract"></i>
                             <strong>Presupuestos</strong>
                         </a>
                     @endif
@@ -151,12 +198,12 @@
                 </li>
                 <li class="nav-item">
                     @if (Request::is('admin/productos'))
-                        <a class="btn btn-light text-dark" href="/admin/productos">
+                        <a class="btn btn-warning text-dark" href="/admin/productos">
                             <i class="fas fa-boxes-stacked"></i>
                             <strong>Inventario</strong>
                         </a>
                     @else
-                        <a class="btn btn-outline-light" href="/admin/productos">
+                        <a class="btn btn-outline-warning text-dark" href="/admin/productos">
                             <i class="fas fa-boxes-stacked"></i>
                             <strong>Inventario</strong>
                         </a>
@@ -164,12 +211,12 @@
                 </li>
                 <li class="nav-item">
                     @if (Request::is('admin/orden-trabajo'))
-                        <a class="btn btn-light text-dark" href="/admin/orden-trabajo">
+                        <a class="btn btn-warning text-dark" href="/admin/orden-trabajo">
                             <i class="fas fa-wrench"></i>
                             <strong>Tareas</strong>
                         </a>
                     @else
-                        <a class="btn btn-outline-light" href="/admin/orden-trabajo">
+                        <a class="btn btn-outline-warning text-dark" href="/admin/orden-trabajo">
                             <i class="fas fa-wrench"></i>
                             <strong>Tareas</strong>
                         </a>
@@ -178,39 +225,25 @@
                 </li>
                 <li class="nav-item">
                     @if (Request::is('admin/facturas'))
-                        <a class="btn btn-light text-dark" href="/admin/facturas">
+                        <a class="btn btn-warning text-dark" href="/admin/facturas">
                             <i class="fas fa-wallet"></i>
                             <strong>Facturación</strong>
                         </a>
                     @else
-                        <a class="btn btn-outline-light" href="/admin/facturas">
+                        <a class="btn btn-outline-warning text-dark" href="/admin/facturas">
                             <i class="fas fa-wallet"></i>
                             <strong>Facturación</strong>
                         </a>
                     @endif
-                </li>
-                <li class="nav-item">
-                    @if (Request::is('admin/informes'))
-                        <a class="btn btn-light text-dark" href="/admin/informes">
-                            <i class="fas fa-file-invoice"></i>
-                            <strong>Informes</strong>
-                        </a>
-                    @else
-                        <a class="btn btn-outline-light" href="/admin/informes">
-                            <i class="fas fa-file-invoice"></i>
-                            <strong>Informes</strong>
-                        </a>
-                    @endif
-
                 </li>
                 <li class="nav-item">
                     @if (Request::is('admin/caja'))
-                        <a class="btn btn-light text-dark" href="/admin/caja">
+                        <a class="btn btn-warning text-dark" href="/admin/caja">
                             <i class="fas fa-cart-shopping"></i>
                             <strong>Caja</strong>
                         </a>
                     @else
-                        <a class="btn btn-outline-light" href="/admin/caja">
+                        <a class="btn btn-outline-warning text-dark" href="/admin/caja">
                             <i class="fas fa-cart-shopping"></i>
                             <strong>Caja</strong>
                         </a>

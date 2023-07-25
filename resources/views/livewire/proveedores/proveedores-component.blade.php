@@ -37,7 +37,7 @@
                                 <td>{{ $proveedor->direccion }}</td>
                                 <td>{{ $proveedor->telefono }}</td>
                                 <td>{{ $proveedor->observaciones }}</td>
-                                <td> <button type="button" class="btn btn-primary boton-producto"
+                                <td> <button type="button" class="btn btn-warning boton-producto"
                                     onclick="Livewire.emit('seleccionarProducto', {{ $proveedor->id }});">Ver/Editar</button>
                             </td>
                             </tr>

@@ -332,8 +332,10 @@
         <div class="mb-3 row d-flex align-items-left">
             <label for="mueve_existencias" class="col-sm-2 col-form-label">¿Este artículo mueve
                 existencias?</label>
-            <input class="col-sm-2 form-check" type="checkbox" wire:model="mueve_existencias"
-                name="mueve_existencias" id="mueve_existencias" />
+            <div class="col-sm-2 mt-3">
+                <input class="form-check form-check-input" type="checkbox"wire:model="mueve_existencias"
+                    name="mueve_existencias" id="mueve_existencias" />
+            </div>
             @error('mueve_existencias')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -375,7 +377,7 @@
 </div>
 <br>
 <div class="mb-3 row d-flex align-items-center">
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="submit" class="btn btn-warning">Guardar</button>
 </div>
 
 @endif

@@ -4,7 +4,7 @@ namespace App\Http\Livewire\OrdenTrabajo;
 
 use App\Models\OrdenTrabajo;
 use App\Models\Trabajador;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\Presupuesto;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -17,6 +17,8 @@ class Index2Component extends Component
 {
     // public $search;
     public $tareas;
+    public $usuarios;
+
     public $tareaSel;
     public $tareaMostrar;
     public $clientes;
@@ -29,7 +31,8 @@ class Index2Component extends Component
     public function mount()
     {
         $this->tareas = OrdenTrabajo::where('operarios', '!=' , null)->get();
-        $this->clientes = Clients::all();
+        $this->clientes = Cliente::all();
+        $this->usuarios = User::all();
         $this->trabajadores = Trabajador::all();
         if(count($this->tareas) > 0){
             $this->tareaSel = $this->tareas->last()->id;

@@ -5,18 +5,18 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab1')">Filtrar por
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab1')">Filtrar por
                                 grupo</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tipo de informe</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab3')">Ver informe</button>
                         </div>
                     </div>
@@ -29,18 +29,18 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Filtrar por grupo</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab2')">Tipo de
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab2')">Tipo de
                                 informe</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab3')">Ver informe</button>
                         </div>
 
@@ -56,18 +56,18 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Filtrar por grupo</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab2')">Tipo de informe</button>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="me-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab3')">Ver
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab3')">Ver
                                 informe</button>
                         </div>
 
@@ -82,11 +82,11 @@
                     <div>
                         <div class="row">
                             <div class="col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-primary btn-block"
+                                <button type="button" class="btn btn-warning btn-block"
                                     wire:click="cambioTab('tab1')">Filtrar por grupo</button>
                             </div>
                             <div class="ms-auto col-6 d-grid gap-2">
-                                <button type="button" class="btn btn-outline-primary btn-block"
+                                <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                     wire:click="cambioTab('tab2')">Tipo de informe</button>
                             </div>
                         </div>
@@ -108,11 +108,11 @@
                 <div style="border-bottom: 1px solid black !important;">
                     <div class="row">
                         <div class="col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-outline-primary btn-block"
+                            <button type="button" class="btn btn-outline-warning text-black  btn-block"
                                 wire:click="cambioTab('tab1')">Filtrar por grupo</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
-                            <button type="button" class="btn btn-primary btn-block" wire:click="cambioTab('tab2')">Tipo de
+                            <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab2')">Tipo de
                                 informe</button>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
                             <h3>Filtrar por grupo</h3>
                         </button>
                     </li>
@@ -162,7 +162,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab2')">
                             <h3>Tipo de informe</h3>
                         </button>
                     </li>
@@ -190,7 +190,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab3')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab3')">
                             <h3>Ver informe</h3>
                         </button>
                     </li>
@@ -203,7 +203,7 @@
             @if ($tab == 'tab1')
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab1')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
                             <h3>Filtrar por grupo</h3>
                         </button>
                     </li>
@@ -228,7 +228,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" wire:click.prevent="cambioTab('tab2')">
+                        <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab2')">
                             <h3>Tipo de informe</h3>
                         </button>
                     </li>

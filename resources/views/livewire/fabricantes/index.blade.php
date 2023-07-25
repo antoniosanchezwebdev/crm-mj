@@ -21,7 +21,7 @@
                         @foreach ($fabricantes as $fabricante)
                             <tr>
                                 <td>{{ $fabricante->nombre }}</td>
-                                <td> <button type="button" class="btn btn-primary boton-producto"
+                                <td> <button type="button" class="btn btn-warning boton-producto"
                                         onclick="Livewire.emit('seleccionarProducto', {{ $fabricante->id }});">Ver/Editar</button>
                                 </td>
                             </tr>

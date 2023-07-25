@@ -330,8 +330,10 @@
         <div class="mb-3 row d-flex align-items-left">
             <label for="mueve_existencias" class="col-sm-2 col-form-label">¿Este artículo mueve
                 existencias?</label>
-            <input class="col-sm-2 form-check" type="checkbox" wire:model="mueve_existencias"
-                name="mueve_existencias" id="mueve_existencias" />
+            <div class="col-sm-2 mt-3">
+                <input class="form-check form-check-input" type="checkbox"wire:model="mueve_existencias"
+                    name="mueve_existencias" id="mueve_existencias" />
+            </div>
             @error('mueve_existencias')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -372,8 +374,9 @@
                 <br>
                 <label for="existencias" class="col-sm-2 col-form-label">Existencias reservadas</label>
                 <div class="col-sm-10">
-                    <input type="number" wire:model="existencias_depositos" class="form-control" name="existencias_depositos" disabled
-                        id="existencias_depositos" placeholder="Existencias reservadas">
+                    <input type="number" wire:model="existencias_depositos" class="form-control"
+                        name="existencias_depositos" disabled id="existencias_depositos"
+                        placeholder="Existencias reservadas">
                     @error('existencias')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -382,8 +385,9 @@
 
                 <label for="existencias" class="col-sm-2 col-form-label">Existencias disponibles</label>
                 <div class="col-sm-10">
-                    <input type="number" wire:model="existencias_almacenes" class="form-control" name="existencias_almacenes"
-                        id="existencias_almacenes" placeholder="Existencias disponibles" wire:change="modificarExistencias">
+                    <input type="number" wire:model="existencias_almacenes" class="form-control"
+                        name="existencias_almacenes" id="existencias_almacenes" placeholder="Existencias disponibles"
+                        wire:change="modificarExistencias">
                     @error('existencias')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -395,7 +399,7 @@
 </div>
 <br>
 <div class="mb-3 row d-flex align-items-center">
-    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <button type="submit" class="btn btn-warning">Actualizar</button>
 </div>
 
 @endif
