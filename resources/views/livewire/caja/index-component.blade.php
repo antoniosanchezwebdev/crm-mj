@@ -1,4 +1,4 @@
-<div class="container mx-auto">
+<div id="containerCajaIndex">
     @if (isset($movimientos))
         <div x-data="{}" x-init="$nextTick(() => {
             $('#tableFacturas').DataTable({

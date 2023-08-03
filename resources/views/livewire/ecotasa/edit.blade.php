@@ -1,4 +1,4 @@
-<div class="container mx-auto">
+<div id="containerEcotasaEdit">
     <div class="card mb-3">
         <h5 class="card-header">
             Revisar ecotasas

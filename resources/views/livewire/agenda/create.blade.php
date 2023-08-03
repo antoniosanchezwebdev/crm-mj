@@ -18,7 +18,7 @@
                                 <select class="form-control" id="select2-cliente-create">
                                     <option value="">-- Elige un cliente --</option>
                                     @foreach ($clientes as $cliente)
-                                        <option value={{ $cliente->id }}>{{ $cliente->nombre_completo }}</option>
+                                        <option value={{ $cliente->id }}>{{ $cliente->nombre }} {{ $cliente->apellido }}</option>
                                     @endforeach
                                 </select>
                             </div>

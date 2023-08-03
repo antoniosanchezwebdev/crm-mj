@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Presupuestos;
 use App\Models\Almacen;
 use App\Models\Presupuesto;
 use Carbon\Carbon;
-use App\Models\Clients;
+use App\Models\Cliente;
 use App\Models\ListaAlmacen;
 use App\Models\Trabajador;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -54,7 +54,7 @@ class EditComponent extends Component
     public function mount()
     {
         $presupuestos = Presupuesto::find($this->identificador);
-        $this->clientes = Clients::all(); // datos que se envian al select2
+        $this->clientes = Cliente::all(); // datos que se envian al select2
         $this->trabajadores = Trabajador::all(); // datos que se envian al select2
         $this->productos = Productos::all(); // datos que se envian al select2
         $this->almacenes = ListaAlmacen::all();

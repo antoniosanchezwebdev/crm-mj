@@ -6,6 +6,7 @@ use App\Models\Evento;
 use App\Models\OrdenLog;
 use App\Models\OrdenTrabajo;
 use App\Models\Productos;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -13,10 +14,11 @@ use Livewire\Component;
 class Dashboard extends Component
 {
 
-    public $tareas_no_completadas;
+    public $tareas_asignadas;
     public $tareas_completadas;
     public $tareas_facturadas;
     public $tareas_en_curso;
+    public $trabajadores;
 
     public $tab = "tab1";
 
@@ -24,9 +26,13 @@ class Dashboard extends Component
 
     public function mount()
     {
-        $this->tareas_en_curso = Evento::all();
-        $this->tareas_no_completadas = Auth::user()->tareas->where('estado', 'Asignada');
+		$inicioSemana = Carbon::now()->startOfWeek();
+		$finSemana = Carbon::now()->endOfWeek();
+        $this->tareas_en_curso = Evento::whereBetween('fecha', [$inicioSemana, $finSemana])->get();
+        $this->tareas_asignadas = Auth::user()->tareas->where('estado', 'Asignada');
         $this->productos = Productos::all();
+        $this->trabajadores = User::all();
+
     }
 
     public function render()

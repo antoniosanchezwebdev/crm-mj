@@ -1,4 +1,4 @@
-<div class="container mx-auto">
+<div id="containerEcotasaIndex2">
     <div class="card mb-3">
         <h5 class="card-header" x-data="{}" x-init="$nextTick(() => {
             $('#tableEcotasa').DataTable({

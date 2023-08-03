@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab1')">Añadir
-                                tarea</button>
+                                cita</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
@@ -32,7 +32,7 @@
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Añadir
-                                tarea</button>
+                                cita</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-warning btn-block"
@@ -58,7 +58,7 @@
                         <div class="ms-auto col-12 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Añadir
-                                tarea</button>
+                                cita</button>
                         </div>
                     </div>
                     <br>
@@ -79,7 +79,7 @@
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
                                 wire:click="cambioTab('tab1')">Añadir
-                                tarea</button>
+                                cita</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
@@ -104,7 +104,7 @@
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-warning btn-block" wire:click="cambioTab('tab1')">Añadir
-                                tarea</button>
+                                cita</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-secondary btn-block"
@@ -129,7 +129,7 @@
                     <div class="row">
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning text-black btn-block"
-                                wire:click="cambioTab('tab1')">Añadir tarea</button>
+                                wire:click="cambioTab('tab1')">Añadir cita</button>
                         </div>
                         <div class="ms-auto col-6 d-grid gap-2">
                             <button type="button" class="btn btn-outline-secondary btn-block"
@@ -156,7 +156,7 @@
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
                         <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
-                            <h3>Añadir tarea</h3>
+                            <h3>Añadir cita</h3>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -176,7 +176,7 @@
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
                         <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
-                            <h5>Añadir tarea</h5>
+                            <h5>Añadir cita</h5>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -199,7 +199,7 @@
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
                         <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
-                            <h5>Añadir tarea</h5>
+                            <h5>Añadir cita</h5>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -222,7 +222,7 @@
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
                         <button class="nav-link active" style="color: #ffaa00;" wire:click.prevent="cambioTab('tab1')">
-                            <h3>Añadir tarea</h3>
+                            <h3>Añadir cita</h3>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -243,7 +243,7 @@
                 <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
                         <button class="nav-link" style="color: #ae9700;" wire:click.prevent="cambioTab('tab1')">
-                            <h5>Añadir tarea</h5>
+                            <h5>Añadir cita</h5>
                         </button>
                     </li>
                     <li class="nav-item">

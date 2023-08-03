@@ -13,6 +13,12 @@ class TabsComponent extends Component
 
     public function render()
     {
+        if($this->tab == null){
+            $this->tab = "tab3";
+        }
+        if($this->tab == "tab2" && $this->evento == null){
+            $this->tab = "tab3";
+        }
         return view('livewire.agenda.tabs-component');
     }
 
@@ -23,7 +29,6 @@ class TabsComponent extends Component
 
     public function selectProducto($evento)
     {
-
         $this->evento = $evento;
         $this->tab = "tab2";
     }

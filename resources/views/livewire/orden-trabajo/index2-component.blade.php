@@ -48,16 +48,16 @@
                             {{-- Recorre los presupuestos --}}
                             @foreach ($tareas as $tarea)
                                 <tr>
-                                    <td>{{ $tarea->presupuesto->numero_presupuesto }}</th>
-
-                                    <td><ul> @foreach(json_decode($tarea->operarios, true) as $operario)
+                                    <td>{{ $tarea->presupuesto->numero_presupuesto }}</td>
+									
+                                    <td>@if($tarea->operarios != null)<ul> @foreach(json_decode($tarea->operarios, true) as $operario)
                                         <li>{{$usuarios->where('id', $operario)->first()->name}}</li>
-                                        @endforeach </ul>
+                                        @endforeach </ul> @endif
                                     </td>
 
                                     <td>{{ $tarea->presupuesto->cliente->nombre }} </td>
 
-                                    <td>{{ $tarea->fecha }}</th>
+                                    <td>{{ $tarea->fecha }}</td>
 
                                     <td>{{ $tarea->presupuesto->marca }} </td>
 

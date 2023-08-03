@@ -22,5 +22,5 @@
 @section('encabezado', 'Agenda')
 @section('subtitulo', 'Calendario')
 
-@livewire('agenda.tabs-component')
+@livewire('agenda.tabs-component', compact('alertas', 'tab'))
 @endsection

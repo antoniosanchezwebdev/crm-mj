@@ -1,35 +1,5 @@
-<div class="container mx-auto">
+<div id="containerAgendaIndex">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <style>
-        @media screen and (max-width:1000px) {
-
-            .fc .fc-daygrid-day-frame {
-                font-size: 0.8em;
-            }
-
-            .fc .fc-button .fc-icon {
-                font-size: 0.8em !important;
-            }
-
-            .fc .fc-toolbar-title {
-                font-size: 1em !important;
-            }
-
-            .fc-daygrid-event .fc-event-title {
-                color: yellow !important;
-            }
-
-            .fc .fc-list-event-title {
-                color: yellow !important;
-            }
-
-        }
-
-        #calendar-container {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
     <div class="card mb-3">
         <h5 class="card-header">
             Calendario
@@ -128,9 +98,9 @@
 
             calendar.render();
 
-            $('.fc-daygrid-event .fc-event-time').css('color', '#c29e00');
+            $('.fc-daygrid-event .fc-event-time').css('color', '#000');
 
-            $('.fc-daygrid-event .fc-event-title').css('color', '#ad8b00');
+            $('.fc-daygrid-event .fc-event-title').css('color', '#000');
 
         })">
             <div id='calendar'></div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+
 
 class AgendaController extends Controller
 {
@@ -14,6 +16,10 @@ class AgendaController extends Controller
      */
     public function index(Request $request)
     {
-        return view('agenda.index');
+        //
+        $alertas = [];
+        $tab = $request->query('tab');      // $user = Auth::user();
+
+        return view('agenda.index', compact('alertas', 'tab'));
     }
 }

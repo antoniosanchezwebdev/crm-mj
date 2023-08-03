@@ -47,7 +47,7 @@ use App\Http\Livewire\Productos\IndexComponent;
 */
 
 Route::name('inicio')->get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Auth::routes();
